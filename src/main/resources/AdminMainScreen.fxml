@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.myshiftapp_new.AdminMainScreenController">
+    <top>
+        <AnchorPane prefHeight="100.0" prefWidth="800.0" style="-fx-background-color: #F0E68C;" BorderPane.alignment="CENTER">
+            <children>
+                <Label layoutX="50.0" layoutY="10.0" text="Welcome,">
+                    <font>
+                        <Font name="System Bold" size="18.0" />
+                    </font>
+                </Label>
+                <ImageView fitHeight="50.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" />
+                <Label layoutX="715.0" layoutY="10.0" text="MY">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+                <Label layoutX="740.0" layoutY="10.0" text="SHIFT" textFill="#8ed2ff">
+                    <font>
+                        <Font size="18.0" />
+                    </font>
+                </Label>
+            <Button fx:id="logOut" layoutX="715.0" layoutY="60.0" mnemonicParsing="false" onAction="#handleLogOut" prefWidth="75.0" style="-fx-background-color: #8ed2ff;" text="Log Out" />
+            <Label fx:id="usernameLabel" layoutX="135.0" layoutY="10.0">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            </children>
+        </AnchorPane>
+    </top>
+    <center>
+        <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+            <tabs>
+                <Tab text="Home">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Button fx:id="adminTimeDisplay" layoutX="10.0" layoutY="20.0" mnemonicParsing="false" onAction="#handleAdminTimeDisplay" prefHeight="150.0" prefWidth="250.0" text="TIME DISPLAY">
+                                    <font>
+                                        <Font size="24.0" />
+                                    </font>
+                                </Button>
+                                <Button fx:id="adminAnnouncements" layoutX="275.0" layoutY="20.0" mnemonicParsing="false" onAction="#handleCreateAnnouncements" prefHeight="150.0" prefWidth="250.0" text="SEND ANNOUCEMENTS" textAlignment="CENTER" wrapText="true">
+                                    <font>
+                                        <Font size="24.0" />
+                                    </font>
+                                </Button>
+                                <Button fx:id="account" layoutX="540.0" layoutY="20.0" mnemonicParsing="false" onAction="#handleManageAccounts" prefHeight="150.0" prefWidth="250.0" text="MANAGE ACCOUNTS" textAlignment="CENTER" wrapText="true">
+                                    <font>
+                                        <Font size="24.0" />
+                                    </font>
+                                </Button>
+                                <Button alignment="CENTER" layoutX="10.0" layoutY="190.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="250.0" text="TIME SHEET CHART (WEEKLY)" textAlignment="CENTER" wrapText="true">
+                                    <font>
+                                        <Font size="24.0" />
+                                    </font>
+                                </Button>
+                                <Button fx:id="punchInOut" layoutX="275.0" layoutY="190.0" mnemonicParsing="false" onAction="#handleAdminPunchInOut" prefHeight="150.0" prefWidth="250.0" text="PUNCH IN/OUT">
+                                    <font>
+                                        <Font size="24.0" />
+                                    </font>
+                                </Button>
+                                <Button layoutX="540.0" layoutY="190.0" mnemonicParsing="false" prefHeight="150.0" prefWidth="250.0" text="BENEFITS">
+                                    <font>
+                                        <Font size="24.0" />
+                                    </font>
+                                </Button>
+                                <Button fx:id="notes" layoutX="50.0" layoutY="360.0" mnemonicParsing="false" onAction="#handleAdminNotes" prefHeight="75.0" prefWidth="700.0" style="-fx-background-color: #8ed2ff;" text="NOTES">
+                                    <font>
+                                        <Font size="24.0" />
+                                    </font>
+                                </Button>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Time">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    </content>
+                </Tab>
+                <Tab text="Schedule">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    </content>
+                </Tab>
+                <Tab text="Pay">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" />
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </center>
+</BorderPane>
